@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>dim_airport_orig</name>
+    <name>dim_airport_dest</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -427,10 +427,10 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2022/10/27 00:51:08.139</created_date>
+    <created_date>2022/10/27 16:30:36.195</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2022/10/27 00:51:08.139</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA=</key_for_session_key>
+    <modified_date>2022/10/27 16:30:36.195</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -563,16 +563,6 @@
   </connection>
   <order>
     <hop>
-      <from>Table input</from>
-      <to>Join rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Table input 2</from>
-      <to>Join rows</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
       <from>Join rows</from>
       <to>Select values</to>
       <enabled>Y</enabled>
@@ -585,6 +575,16 @@
     <hop>
       <from>Sort rows</from>
       <to>Unique rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Table input</from>
+      <to>Join rows</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Table input 2</from>
+      <to>Join rows</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
@@ -609,7 +609,7 @@
     <update_bypassed>N</update_bypassed>
     <lookup>
       <schema>airports_dw</schema>
-      <table>dim_airport_orig</table>
+      <table>dim_airport_dest</table>
       <key>
         <name>name</name>
         <field>AIRPORTNAME</field>
@@ -653,8 +653,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>432</yloc>
+      <xloc>560</xloc>
+      <yloc>416</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -678,7 +678,7 @@
         <negated>N</negated>
         <leftvalue>airport_id</leftvalue>
         <function>=</function>
-        <rightvalue>from</rightvalue>
+        <rightvalue>to</rightvalue>
       </condition>
     </compare>
     <attributes/>
@@ -690,8 +690,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>256</xloc>
-      <yloc>224</yloc>
+      <xloc>320</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -727,8 +727,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>368</xloc>
-      <yloc>224</yloc>
+      <xloc>432</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -785,8 +785,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>224</yloc>
+      <xloc>560</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -917,8 +917,8 @@ FROM airports.airport NATURAL JOIN airports.airport_geo
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>144</yloc>
+      <xloc>176</xloc>
+      <yloc>128</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -934,8 +934,7 @@ FROM airports.airport NATURAL JOIN airports.airport_geo
       <schema_name/>
     </partitioning>
     <connection>airports</connection>
-    <sql>SELECT `from` 
-FROM airports.flight
+    <sql>SELECT `to` FROM airports.flight
 </sql>
     <limit>0</limit>
     <lookup/>
@@ -947,11 +946,11 @@ FROM airports.flight
       <value-meta>
         <type>Integer</type>
         <storagetype>normal</storagetype>
-        <name>from</name>
+        <name>to</name>
         <length>4</length>
         <precision>0</precision>
         <origin>Table input 2</origin>
-        <comments>from</comments>
+        <comments>to</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -977,8 +976,8 @@ FROM airports.flight
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>304</yloc>
+      <xloc>176</xloc>
+      <yloc>288</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
@@ -1020,8 +1019,8 @@ FROM airports.flight
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>320</yloc>
+      <xloc>560</xloc>
+      <yloc>304</yloc>
       <draw>Y</draw>
     </GUI>
   </step>
