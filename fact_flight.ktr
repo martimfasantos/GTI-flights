@@ -564,136 +564,10 @@
   <order>
     <hop>
       <from>Table input</from>
-      <to>Calculator</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Calculator</from>
-      <to>Select values</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Select values</from>
       <to>Insert / update</to>
       <enabled>Y</enabled>
     </hop>
   </order>
-  <step>
-    <name>Calculator</name>
-    <type>Calculator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <failIfNoFile>Y</failIfNoFile>
-    <calculation>
-      <field_name>DAY_DEPT</field_name>
-      <calc_type>DAY_OF_MONTH</calc_type>
-      <field_a>departure</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>None</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>MONTH_DEPT</field_name>
-      <calc_type>MONTH_OF_DATE</calc_type>
-      <field_a>departure</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>None</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>YEAR_DEPT</field_name>
-      <calc_type>YEAR_OF_DATE</calc_type>
-      <field_a>departure</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>None</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>DAY_ARRV</field_name>
-      <calc_type>DAY_OF_MONTH</calc_type>
-      <field_a>arrival</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>None</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>MONTH_ARRV</field_name>
-      <calc_type>MONTH_OF_DATE</calc_type>
-      <field_a>arrival</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>None</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <calculation>
-      <field_name>YEAR_ARRV</field_name>
-      <calc_type>YEAR_OF_DATE</calc_type>
-      <field_a>arrival</field_a>
-      <field_b/>
-      <field_c/>
-      <value_type>None</value_type>
-      <value_length>-1</value_length>
-      <value_precision>-1</value_precision>
-      <remove>N</remove>
-      <conversion_mask/>
-      <decimal_symbol/>
-      <grouping_symbol/>
-      <currency_symbol/>
-    </calculation>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>256</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
   <step>
     <name>Insert / update</name>
     <type>InsertUpdate</type>
@@ -717,135 +591,43 @@
         <condition>=</condition>
         <name2/>
       </key>
-      <key>
-        <name>airport_name_orig</name>
-        <field>AIRPORTORIGIN</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>airport_name_dest</name>
-        <field>AIRPORTDESTIN</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>DAY_DEPT</name>
-        <field>DAY_DEPT</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>MONTH_DEPT</name>
-        <field>MONTH_DEPT</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>YEAR_DEPT</name>
-        <field>YEAR_DEPT</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>DAY_ARRV</name>
-        <field>DAY_ARRV</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>MONTH_ARRV</name>
-        <field>MONTH_ARRV</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>YEAR_ARRV</name>
-        <field>YEAR_ARRV</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>airline_name</name>
-        <field>AIRLINENAME</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>airplane_type_id</name>
-        <field>AIRPLANE_TYPE</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>n_passengers</name>
-        <field>PASSENGERS</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>revenue</name>
-        <field>REVENUE</field>
-        <condition>=</condition>
-        <name2/>
-      </key>
       <value>
         <name>FLIGHT_ID</name>
         <rename>flight_id</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>AIRPORTORIGIN</name>
-        <rename>airport_name_orig</rename>
+        <name>AIRPORT_ORIG</name>
+        <rename>from</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>AIRPORTDESTIN</name>
-        <rename>airport_name_dest</rename>
+        <name>AIRPORT_DEST</name>
+        <rename>to</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>DAY_DEPT</name>
-        <rename>DAY_DEPT</rename>
+        <name>DEPARTURE</name>
+        <rename>departure</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>MONTH_DEPT</name>
-        <rename>MONTH_DEPT</rename>
+        <name>ARRIVAL</name>
+        <rename>arrival</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>YEAR_DEPT</name>
-        <rename>YEAR_DEPT</rename>
+        <name>AIRLINE_ID</name>
+        <rename>airline_id</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>DAY_ARRV</name>
-        <rename>DAY_ARRV</rename>
+        <name>AIRPLANE_ID</name>
+        <rename>airplane_id</rename>
         <update>Y</update>
       </value>
       <value>
-        <name>MONTH_ARRV</name>
-        <rename>MONTH_ARRV</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>YEAR_ARRV</name>
-        <rename>YEAR_ARRV</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>AIRLINENAME</name>
-        <rename>airline_name</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>AIRPLANE_TYPE</name>
-        <rename>airplane_type_id</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>PASSENGERS</name>
+        <name>N_PASSENGERS</name>
         <rename>n_passengers</rename>
         <update>Y</update>
       </value>
@@ -864,74 +646,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>528</xloc>
-      <yloc>144</yloc>
-      <draw>Y</draw>
-    </GUI>
-  </step>
-  <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <fields>
-      <field>
-        <name>flight_id</name>
-      </field>
-      <field>
-        <name>airport_name_orig</name>
-      </field>
-      <field>
-        <name>airport_name_dest</name>
-      </field>
-      <field>
-        <name>DAY_DEPT</name>
-      </field>
-      <field>
-        <name>MONTH_DEPT</name>
-      </field>
-      <field>
-        <name>YEAR_DEPT</name>
-      </field>
-      <field>
-        <name>DAY_ARRV</name>
-      </field>
-      <field>
-        <name>MONTH_ARRV</name>
-      </field>
-      <field>
-        <name>YEAR_ARRV</name>
-      </field>
-      <field>
-        <name>airline_name</name>
-      </field>
-      <field>
-        <name>airplane_type_id</name>
-      </field>
-      <field>
-        <name>n_passengers</name>
-      </field>
-      <field>
-        <name>revenue</name>
-      </field>
-      <select_unspecified>N</select_unspecified>
-    </fields>
-    <attributes/>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>384</xloc>
+      <xloc>288</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -949,19 +664,15 @@
     </partitioning>
     <connection>airports</connection>
     <sql>SELECT flight_id,
-	   airp_dept.name AS airport_name_orig,
-       airp_arrv.name AS airport_name_dest,
+	   `from`,
+       `to`,
 	   departure, 
 	   arrival,
-       airlinename AS airline_name, 
-       type_id AS airplane_type_id, 
-       SUM(price) AS revenue, 
-       COUNT(booking_id) AS n_passengers
-FROM airports.flight AS f
-	JOIN airports.airport AS airp_dept ON airp_dept.airport_id = f.from
-	JOIN airports.airport AS airp_arrv ON airp_arrv.airport_id = f.to
- 	JOIN airports.airline AS airline ON airline.airline_id = f.airline_id
-	JOIN airports.airplane AS airplane ON airplane.airplane_id = f.airplane_id
+       airline_id, 
+       airplane_id, 
+	   COUNT(booking_id) AS n_passengers,
+       SUM(price) AS revenue
+FROM airports.flight
 	NATURAL JOIN airports.booking
 GROUP BY flight_id</sql>
     <limit>0</limit>
@@ -995,14 +706,14 @@ GROUP BY flight_id</sql>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>String</type>
+        <type>Integer</type>
         <storagetype>normal</storagetype>
-        <name>airport_name_orig</name>
-        <length>50</length>
-        <precision>-1</precision>
+        <name>from</name>
+        <length>4</length>
+        <precision>0</precision>
         <origin>Table input</origin>
-        <comments>airport_name_orig</comments>
-        <conversion_Mask/>
+        <comments>from</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
@@ -1018,14 +729,14 @@ GROUP BY flight_id</sql>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>String</type>
+        <type>Integer</type>
         <storagetype>normal</storagetype>
-        <name>airport_name_dest</name>
-        <length>50</length>
-        <precision>-1</precision>
+        <name>to</name>
+        <length>4</length>
+        <precision>0</precision>
         <origin>Table input</origin>
-        <comments>airport_name_dest</comments>
-        <conversion_Mask/>
+        <comments>to</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
@@ -1087,14 +798,14 @@ GROUP BY flight_id</sql>
         <lenient_string_to_number>N</lenient_string_to_number>
       </value-meta>
       <value-meta>
-        <type>String</type>
+        <type>Integer</type>
         <storagetype>normal</storagetype>
-        <name>airline_name</name>
-        <length>30</length>
-        <precision>-1</precision>
+        <name>airline_id</name>
+        <length>4</length>
+        <precision>0</precision>
         <origin>Table input</origin>
-        <comments>airline_name</comments>
-        <conversion_Mask/>
+        <comments>airline_id</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
@@ -1112,11 +823,34 @@ GROUP BY flight_id</sql>
       <value-meta>
         <type>Integer</type>
         <storagetype>normal</storagetype>
-        <name>airplane_type_id</name>
+        <name>airplane_id</name>
         <length>9</length>
         <precision>0</precision>
         <origin>Table input</origin>
-        <comments>airplane_type_id</comments>
+        <comments>airplane_id</comments>
+        <conversion_Mask>####0;-####0</conversion_Mask>
+        <decimal_symbol>.</decimal_symbol>
+        <grouping_symbol>,</grouping_symbol>
+        <currency_symbol/>
+        <trim_type>none</trim_type>
+        <case_insensitive>N</case_insensitive>
+        <collator_disabled>Y</collator_disabled>
+        <collator_strength>0</collator_strength>
+        <sort_descending>N</sort_descending>
+        <output_padding>N</output_padding>
+        <date_format_lenient>N</date_format_lenient>
+        <date_format_locale>en_US</date_format_locale>
+        <date_format_timezone>Europe/Lisbon</date_format_timezone>
+        <lenient_string_to_number>N</lenient_string_to_number>
+      </value-meta>
+      <value-meta>
+        <type>Integer</type>
+        <storagetype>normal</storagetype>
+        <name>n_passengers</name>
+        <length>15</length>
+        <precision>0</precision>
+        <origin>Table input</origin>
+        <comments>n_passengers</comments>
         <conversion_Mask>####0;-####0</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol>,</grouping_symbol>
@@ -1143,29 +877,6 @@ GROUP BY flight_id</sql>
         <conversion_Mask>######0.0###################;-######0.0###################</conversion_Mask>
         <decimal_symbol>.</decimal_symbol>
         <grouping_symbol/>
-        <currency_symbol/>
-        <trim_type>none</trim_type>
-        <case_insensitive>N</case_insensitive>
-        <collator_disabled>Y</collator_disabled>
-        <collator_strength>0</collator_strength>
-        <sort_descending>N</sort_descending>
-        <output_padding>N</output_padding>
-        <date_format_lenient>N</date_format_lenient>
-        <date_format_locale>en_US</date_format_locale>
-        <date_format_timezone>Europe/Lisbon</date_format_timezone>
-        <lenient_string_to_number>N</lenient_string_to_number>
-      </value-meta>
-      <value-meta>
-        <type>Integer</type>
-        <storagetype>normal</storagetype>
-        <name>n_passengers</name>
-        <length>15</length>
-        <precision>0</precision>
-        <origin>Table input</origin>
-        <comments>n_passengers</comments>
-        <conversion_Mask>####0;-####0</conversion_Mask>
-        <decimal_symbol>.</decimal_symbol>
-        <grouping_symbol>,</grouping_symbol>
         <currency_symbol/>
         <trim_type>none</trim_type>
         <case_insensitive>N</case_insensitive>
