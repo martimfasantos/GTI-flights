@@ -597,7 +597,7 @@
         <update>Y</update>
       </value>
       <value>
-        <name>AIRLINENAME</name>
+        <name>AIRLINE_NAME</name>
         <rename>airlinename</rename>
         <update>Y</update>
       </value>
