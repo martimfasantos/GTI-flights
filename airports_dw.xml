@@ -46,11 +46,11 @@
       <Hierarchy name="Airport Destination Hierarchy" visible="true" hasAll="true" allMemberName="All Airport_Destination" primaryKey="AIRPORT_ID">
         <Table name="dim_airport_dest">
         </Table>
-        <Level name="Airport Name" visible="true" column="AIRPORTNAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="Country" visible="true" column="COUNTRY" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
         <Level name="City" visible="true" column="CITY" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
-        <Level name="Country" visible="true" column="COUNTRY" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="Airport Name" visible="true" column="AIRPORTNAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
       </Hierarchy>
     </Dimension>
@@ -58,17 +58,17 @@
       <Hierarchy name="Airport Origin Hierarchy" visible="true" hasAll="true" allMemberName="All Airport Origin" primaryKey="AIRPORT_ID">
         <Table name="dim_airport_orig">
         </Table>
-        <Level name="Airport Name" visible="true" column="AIRPORTNAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="Country" visible="true" column="COUNTRY" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
         <Level name="City" visible="true" column="CITY" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
-        <Level name="Country" visible="true" column="COUNTRY" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+        <Level name="Airport Name" visible="true" column="AIRPORTNAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
         </Level>
       </Hierarchy>
     </Dimension>
     <Measure name="Revenue" column="REVENUE" datatype="Numeric" formatString="$ #,###.00" aggregator="sum" visible="true">
     </Measure>
-    <Measure name="Passengers" column="N_PASSENGERS" datatype="Integer" formatString="#,####" aggregator="count" visible="true">
+    <Measure name="Passengers" column="N_PASSENGERS" datatype="Integer" formatString="#,####" aggregator="sum" visible="true">
     </Measure>
   </Cube>
 </Schema>
