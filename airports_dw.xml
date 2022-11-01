@@ -18,8 +18,8 @@
         </Level>
       </Hierarchy>
     </Dimension>
-    <Dimension type="TimeDimension" visible="true" foreignKey="ARRIVAL" highCardinality="false" name="Time_Arrival">
-      <Hierarchy name="Time_Arrival Hierarchy" visible="true" hasAll="true" allMemberName="All Time_Arrival" primaryKey="TIME_ID">
+    <Dimension type="TimeDimension" visible="true" foreignKey="ARRIVAL" highCardinality="false" name="Time Arrival">
+      <Hierarchy name="Time Arrival Hierarchy" visible="true" hasAll="true" allMemberName="All Time_Arrival" primaryKey="TIME_ID">
         <Table name="dim_time_arrv">
         </Table>
         <Level name="Year" visible="true" column="YEAR_ID" type="Integer" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
@@ -30,8 +30,8 @@
         </Level>
       </Hierarchy>
     </Dimension>
-    <Dimension type="TimeDimension" visible="true" foreignKey="DEPARTURE" highCardinality="false" name="Time_Departure">
-      <Hierarchy name="Time_Departure Hierarchy" visible="true" hasAll="true" allMemberName="All Time_Departure" primaryKey="TIME_ID">
+    <Dimension type="TimeDimension" visible="true" foreignKey="DEPARTURE" highCardinality="false" name="Time Departure">
+      <Hierarchy name="Time Departure Hierarchy" visible="true" hasAll="true" allMemberName="All Time_Departure" primaryKey="TIME_ID">
         <Table name="dim_time_dept">
         </Table>
         <Level name="Year" visible="true" column="YEAR_ID" type="Integer" uniqueMembers="false" levelType="TimeYears" hideMemberIf="Never">
@@ -42,8 +42,8 @@
         </Level>
       </Hierarchy>
     </Dimension>
-    <Dimension type="StandardDimension" visible="true" foreignKey="AIRPORT_DEST" highCardinality="false" name="Aiport_Destination">
-      <Hierarchy name="Airport_Destination Hierarchy" visible="true" hasAll="true" allMemberName="All Airport_Destination" primaryKey="AIRPORT_ID">
+    <Dimension type="StandardDimension" visible="true" foreignKey="AIRPORT_DEST" highCardinality="false" name="Airport Destination">
+      <Hierarchy name="Airport Destination Hierarchy" visible="true" hasAll="true" allMemberName="All Airport_Destination" primaryKey="AIRPORT_ID">
         <Table name="dim_airport_dest">
         </Table>
         <Level name="Airport Name" visible="true" column="AIRPORTNAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
@@ -54,8 +54,8 @@
         </Level>
       </Hierarchy>
     </Dimension>
-    <Dimension type="StandardDimension" visible="true" foreignKey="AIRPORT_ORIG" highCardinality="false" name="Airport_Origin">
-      <Hierarchy name="Airport_Origin Hierarchy" visible="true" hasAll="true" allMemberName="All Airport Origin" primaryKey="AIRPORT_ID">
+    <Dimension type="StandardDimension" visible="true" foreignKey="AIRPORT_ORIG" highCardinality="false" name="Airport Origin">
+      <Hierarchy name="Airport Origin Hierarchy" visible="true" hasAll="true" allMemberName="All Airport Origin" primaryKey="AIRPORT_ID">
         <Table name="dim_airport_orig">
         </Table>
         <Level name="Airport Name" visible="true" column="AIRPORTNAME" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
