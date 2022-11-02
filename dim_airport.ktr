@@ -597,7 +597,7 @@
         <update>Y</update>
       </value>
       <value>
-        <name>AIRPORTNAME</name>
+        <name>AIRPORT_NAME</name>
         <rename>name</rename>
         <update>Y</update>
       </value>
